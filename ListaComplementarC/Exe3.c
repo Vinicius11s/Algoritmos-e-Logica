@@ -8,14 +8,14 @@
 
 void main(){
 	float alt, calc ;
-	char sexo;
+	char sexo ;
 	
 	printf ("Informe sua altura: ");
-	scanf ("%f", alt);
+	scanf ("%f", &alt);
 	printf ("Informe seu sexo: ");
 	scanf ("%s", sexo);
 	
-	if(sexo = masculino && sexo = Masculino){
+	if(sexo = "masculino" || sexo = "Masculino"){
 		calc = (72.7 * alt) - 58;
 		printf ("Seu peso ideal é: %f", calc);
 	}
