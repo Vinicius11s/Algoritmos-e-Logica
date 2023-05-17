@@ -12,7 +12,7 @@ void main(){
 	printf("Informe sua terceira nota: ");
 	scanf("%f", &nota3);
 	media = (nota1 + nota2 + nota3) / 3;
-	printf("Sua média final foi: %0.2f", media);		
+	printf("Sua media final foi: %0.2f", media);		
 	
 	
 	
