@@ -6,18 +6,17 @@
 //de idade desse grupo de idades. 
 
 void main(){
-	int idade, idadee, i = 0 ;
 	float media;
-	while(idade = 0){
-		if (idade =! 0){
-		printf("Informe sua idade: ");
-		scanf("%d", &idade);
-		idadee = idadee + idade;
-		i++;
-		}
-		else{}
+	int qtde, idade = 1;
+	while(idade != 0){
+		if (idade != 0){
+			printf("Informe sua idade: ");
+			scanf("%d", &idade);
+			qtde++;
+		}		
 	}
-	media = idadee / i;
-	printf("Foram lidas %d idades", i);	
-	printf("A média das idades lidas é: %f", media);	
+	qtde--;
+	printf("\nForam lidas: %d idades", qtde);
+	media = idade / qtde;
+	printf("\nA media de idades e: %0.2f", media);
 }

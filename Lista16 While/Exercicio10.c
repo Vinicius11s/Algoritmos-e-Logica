@@ -8,21 +8,22 @@
 
 void main(){
 	char nome[60];
-	float alt, num, i = 0, alt_maior = 0;
-	while (num = 2){
-		printf("Informe seu nome: ");
-		scanf ("%s",nome);
-		i++;
+	float alt, alt_maior = 0;
+	int qtde = 0, resp = 1;
+	
+	while (resp == 1){
+		printf("Informe o Nome: ");
+		scanf ("%s", nome);
 		printf ("Informe sua altura: ");
-		scanf ("%f \n", &alt);
-			if(alt > alt_maior){
-				alt_maior = alt;
-			}
-			else{}
-		printf("Você deseja continuar (1 -continuar, 2 - parar) ");
-		scanf ("%f \n", &num);
+		scanf ("%f", &alt);
+		qtde++;
+		if(alt > alt_maior){
+			alt_maior = alt;
+		}	
+		printf("Voce deseja continuar (1 -continuar, 2 - parar \n)");
+		scanf ("%d", &resp);			
 	}
-	printf("Altura da moça mais alta: %f ", alt_maior);
-	printf("Número de moças inscritas no concurso: %f ", i );
+	printf(" \n Altura mais alta: %0.2f ", alt_maior);
+	printf(" \n Número de inscritas no concurso: %d ", qtde );
 			
 }

@@ -11,17 +11,17 @@
 void main(){
 	char com[51];
 	float larg, comp, area;
-	int num;
-	while( num = 1){
-		printf("Informe o cômodo: ");
+	int num = 0;
+	while(num != 1){
+		printf("Informe o comodo: ");
 		scanf("%s", com);
 		printf("Informe a largura: ");
-		scanf("%f \n", larg);
+		scanf("%f", &larg);
 		printf("Informe o comprimento: ");
-		scanf("%f \n", comp);
+		scanf("%f", &comp);
 		area = larg * comp;
-		printf("A área do comodo %s é de: %f ", com, area);
-		printf("Você deseja continuar calculando novos comodos (1 - NÃO / 2 - SIM). ");
-		scanf("%d \n", num);
+		printf("A area do comodo eh de: %0.2f ", area);
+		printf("\n \nVoce deseja continuar calculando novos comodos (1-NAO;2-SIM) ");
+		scanf("%d", &num);
 	}	
 }
