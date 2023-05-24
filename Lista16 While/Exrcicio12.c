@@ -16,7 +16,7 @@ void main(){
 		}		
 	}
 	qtde--;
-	printf("\nForam lidas: %d idades", qtde);
 	media = idade / qtde;
-	printf("\nA media de idades e: %0.2f", media);
+	printf("\nForam lidas: %d idades", qtde);
+	printf("\nA media de idades e %0.2f", media);
 }
