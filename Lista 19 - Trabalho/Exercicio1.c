@@ -11,7 +11,7 @@
 
 void main(){
 	float media_turma, altura_turma, media_fem, altura_fem, altura_menor = 9999, altura_maior = 0,  altura;
-	int qtde_masc = 0, qtde_fem = 0, fichas = 0, sexo;
+	int qtde_masc = 0, qtde_fem = 0, fichas = 1, sexo;
 	
 	
 	do{
