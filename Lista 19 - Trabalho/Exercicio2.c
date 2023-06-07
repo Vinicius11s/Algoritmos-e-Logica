@@ -6,7 +6,7 @@
 //- Suponha que não exista dois ou mais alunos com a mesma nota.
 
 void main(){
-	float nota, nota_maior, segunda_nota;
+	float nota, nota_maior, segunda_nota = 0;
 	int  segunda_matricula, matricula_maior, matricula, ficha = 1;
 	
 	do{
