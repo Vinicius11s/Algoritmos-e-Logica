@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <conio.h>
 
@@ -18,12 +19,11 @@
 
 
 void main(){
-	int reprov = 0, alunos = 1, matricula, frequencia;
-	float nota1, nota2, nota3, nota_final, nota_turma, nota_maior = 0, nota_menor = 99999, media_turma;
+	float reprov = 0, alunos = 1, matricula, frequencia, reprov_falta = 0, qtd, porcentagem, porc, nota1, nota2, nota3, nota_final, nota_turma, nota_maior = 0, nota_menor = 99999, media_turma;
 	
 	do{
 		printf("Informe seu numero de matricula: ");
-		scanf("%d", &matricula);
+		scanf("%f", &matricula);
 		printf("Informe a 1. Nota: ");
 		scanf("%f", &nota1);
 		printf("Informe a 2. Nota: ");
@@ -31,7 +31,7 @@ void main(){
 		printf("Informe a 3. Nota: ");
 		scanf("%f", &nota3);
 		printf("Informe a Frequencia: ");
-		scanf("%d", &frequencia);		
+		scanf("%f", &frequencia);		
 		alunos++;
 		
 		nota_final = (nota1 + nota2 + nota3) / 3;
@@ -52,16 +52,27 @@ void main(){
 			}
 		
 		
-		if(nota_final < 6.0 || frequencia < 40 ){
+		if(nota_final < 6.0 || frequencia <= 40 ){
 			reprov++;
 		}
 		else{
 		}
 		
-	} while( alunos <= 2);
+		if(nota_final > 6.0 && frequencia < 40){
+			reprov_falta++;
+		}
+		else{
+		}
+	qtd++;	
+	} while( alunos <= 10);
+	
+	porcentagem = reprov_falta * 100;
+	porc = porcentagem / qtd;
 	
 	printf("\nA Maior Nota da Turma foi: %0.2f", nota_maior);
 	printf("\nA Menor Nota da Turma foi: %0.2f", nota_menor);
 	printf("\nA Media da Turma Foi: %0.2f", media_turma);
-	printf("\nForam Reprovados: %d Alunos", reprov);
+	printf("\nForam Reprovados: %0.2f Alunos", reprov);
+	printf("\nA porcentagem de alunos reprovados por falta foi: %0.2f ", porc);
+	
 }		

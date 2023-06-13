@@ -6,31 +6,35 @@
 //- Suponha que não exista dois ou mais alunos com a mesma nota.
 
 void main(){
-	float nota, nota_maior, segunda_nota = 0;
-	int  segunda_matricula, matricula_maior, matricula, ficha = 1;
+	int  i = 0, matricula, matricula_primeira_maior, matricula_segunda_maior;
+	float nota, nota_primeira_maior = 0, nota_segunda_maior = 0;
+	
 	
 	do{
-		printf("\nInforme o numero de matricula: ");
+		printf("\nInforme a Matricula: ");
 		scanf("%d", &matricula);
-		printf("Informe sua nota: ");
+		printf("Informe a nota: ");
 		scanf("%f", &nota);	
-		ficha++;
+		i++;
 		
-		if(nota > nota_maior){
-			nota_maior = nota;
-			matricula_maior = matricula;
+		if(nota > nota_primeira_maior){
+			nota_segunda_maior = nota_primeira_maior;
+			matricula_segunda_maior = matricula_primeira_maior;
+			nota_primeira_maior = nota;
+			matricula_primeira_maior = matricula;
 		}
 		else{
-			if(nota > segunda_nota && nota < nota_maior){
-				segunda_nota = nota;
-				segunda_matricula = matricula;
+			if(nota > nota_segunda_maior){
+				nota_segunda_maior = nota;
+				matricula_segunda_maior = matricula;
 			}
 		}	
-	} while (ficha <= 7);
+	} while (i < 7);
 	
-	printf("\nA Maior Nota Eh: %0.2f", nota_maior);
-	printf("\nNumero de matricula: %d", matricula_maior);
-	printf("\n");
-	printf("\nA Segunda Maior Nota Foi: %0.2f", segunda_nota);
-	printf("\nNumero de matricula: %d", segunda_matricula);
+	printf("\nMaior Nota: %0.2f\n", nota_primeira_maior);
+	printf("Numero de matricula: %d\n", matricula_primeira_maior);
+	printf("\nA Segunda Maior Nota Foi: %0.2f\n", nota_segunda_maior);
+	printf("Numero de matricula: %d\n", matricula_segunda_maior);
+	
 }
+
